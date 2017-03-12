@@ -1,0 +1,25 @@
+//모듈을 추출합니다.
+var http = require('http'); 
+
+//웹 서버를 만들고 실행합니다.
+http.createServer(function (request, response) {
+    response.writeHead(200, {'Context-Type': 'text/html'});
+    response.end('<h1>Hello World...!</h1>');
+}).listen(52273, function (){
+    console.log('Server running at http://127.0.0.1:52273/');
+});
+
+//이크마6
+/*
+//모듈을 추출합니다.
+const http = require('http'); 
+
+//웹 서버를 만들고 실행합니다.
+http.createServer((request, response)=> {
+    response.writeHead(200, {'Context-Type': 'text/html'});
+    response.end('<h1>Hello World...!</h1>');
+}).listen(52273, ()=>{
+    console.log('Server running at http://127.0.0.1:52273/');
+});
+
+*/
